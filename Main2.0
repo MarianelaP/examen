@@ -1,0 +1,70 @@
+package Examen1;
+
+import javax.swing.JOptionPane;
+
+// Empresa Constructora
+public class Main {
+    public static void main(String[] args) {
+        
+        Constructora Heredia = new Constructora("A un costado del mall Oxigeno"+
+                "\n"+"Codigo de Sucursal: 7859 ");
+        Cliente NuevoCliente = new Cliente(null,null,null
+                ,0);
+    
+    byte op = 0;
+    
+    while (op != 5) {
+    
+    op = Byte.parseByte(JOptionPane.showInputDialog(
+            "Bienvenido a la Constructora"+"\n"+
+            "Ingrese el numero de la seccion que desea ingresar:"
+            +"\n"+"1. Constructora"+"\n"+"2. Personal"+"\n"+
+            "3. Cliente"+"\n"+"4. Maquinaria"+"\n"+"5. Salir"));
+    if (op ==1) {
+        JOptionPane.showMessageDialog(null,
+                "INFORMACIÓN DE LA SEDE Heredia"+"\n"+
+                "Ubicación: "+Heredia.getDireccion());
+    }
+    
+    if (op == 2) {
+        JOptionPane.showMessageDialog(null,
+                "Bienvenido a Personal");
+    }
+    
+    if(op == 3) {
+            JOptionPane.showMessageDialog(null,
+                    "Apartado de Cliente");
+
+            byte opcion = Byte.parseByte(JOptionPane.showInputDialog(
+                    "Desea ingresar sus datos personales?"
+                    + "\n" + "1 = SI  2 = NO"));
+            if (opcion == 1) {
+                String nombre;
+                String cedula;
+                String fechaPago;
+                int numeroTelefono;
+                
+
+                nombre = JOptionPane.showInputDialog("Ingrese su nombre:");
+                cedula= JOptionPane.showInputDialog("Ingrese su cedula:");
+                fechaPago = JOptionPane.showInputDialog("Ingrese su fecha de Pago:");
+                numeroTelefono = Integer.parseInt(JOptionPane.showInputDialog("Ingrese"
+                        + "su numero de telefono"));
+
+                NuevoCliente.setNombre(nombre);
+                NuevoCliente.setCedula(cedula);
+                NuevoCliente.setCedula(fechaPago);
+                NuevoCliente.setNumeroTelefono(numeroTelefono);
+            }
+    }
+    if (op == 4){
+        
+    }
+    if(op == 5){
+        JOptionPane.showMessageDialog(null,
+                "Usted ha salido");
+    }
+    
+}
+    }
+}
