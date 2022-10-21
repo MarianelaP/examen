@@ -1,0 +1,42 @@
+package Examen1;
+
+import javax.swing.JOptionPane;
+
+public class Asientos {
+    
+    private int Categoria;
+
+    public Asientos(int Categoria) {
+        this.Categoria = Categoria;
+    }
+
+    public void setCategoria(int Categoria) {
+        this.Categoria = Categoria;
+    }
+    
+    public void SeleccionarAsiento() {
+        
+        if ( Categoria == 1) {
+            
+            JOptionPane.showMessageDialog(null, 
+                    "Los beneficios de la clase alta son: \n"
+                    + "Asientos al Frente al escenario (Lo mas cerca posible)\n"
+                    + "Posibilidad de ir detras del escenario");
+            
+        } else if ( Categoria == 2) {
+            
+            JOptionPane.showMessageDialog(null, 
+                    "El beneficio de la clase media es: \n"+
+                    "1. Sentarse a una distancia media");
+            
+        } else {
+            
+            JOptionPane.showMessageDialog(null, 
+                    "El beneficio de la clase media es: \n" +
+                    "1. Estara a una distancia considerable ");
+            
+        }
+        
+}
+       
+}
