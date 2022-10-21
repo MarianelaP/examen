@@ -1,0 +1,78 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+package com.mycompany.constructora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Usuario
+ */
+public class Constructora {
+
+    public static void main(String[] args, String n) {
+
+        Codigo Sucursal = new Sucursal("1514", "1019",
+                "2022");
+
+        Cliente NuevoUsuario = new Cliente(null, null, null, 0);
+
+        Personal Personal = new Personal("Gerente",
+                "Vendedores");
+
+        byte op = 0;
+
+        while (op != 5) {
+            op = Byte.parseByte(JOptionPane.showInputDialog(
+            "" "Bienvenido a Constructora"+"\n"+
+             "Digite el numero de la seccciÃ³n: "+"\n"+ 
+             +""""1. Sucursal"+"\n+"2. Cliente"+"\"\n"+n
+                    + "3. Personal" + "4. Salir"
+            ));
+             
+             if (op == 1) {
+                JOptionPane.showMessageDialog(null,
+                        """
+             Codigo de la Sucursal: 
+             Cliente : """ + Jose.getCliente() + "\n"
+                        + "Personal : " + Juan.getPersonal() + "\n" +)
+                     
+                     
+                byte opcion = Byte.parseByte(JOptionPane.showInputDialog
+            (   """
+                Desea verificar clientes?
+                1 = SI  2 = NO"""));
+
+                if (opcion == 1) {
+                    Codigo.registro();
+                }
+            }
+            if (op == 2) {
+                JOptionPane.showMessageDialog(null,
+                        "Bienvenido a Clientes");
+                Clientes.lista();
+            }
+
+            if (op == 3) {
+                JOptionPane.showMessageDialog(null,
+                        "Personal");
+                Personal.planilla();
+
+                if (op == 5) {
+                    JOptionPane.showMessageDialog(null,
+                            "Usted ha salido");
+                }
+
+            }
+
+        }
+
+    }
+
+    private static class Sucursal extends Codigo {
+
+        public Sucursal(String string, String string0, String string1) {
+        }
+    }
