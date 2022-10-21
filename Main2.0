@@ -5,6 +5,21 @@ import javax.swing.JOptionPane;
 // Empresa Constructora
 public class Main {
     public static void main(String[] args) {
+    
+    Asientos NuevoAsiento = new Asientos(0);
+    
+    int Categoria;
+
+    Categoria = Integer.parseInt(JOptionPane.showInputDialog("Las categorias"
+                + " disponibles son: \n"
+                + "1. Alta\n"
+                + "2. Media\n"
+                + "3. Baja\n"
+                + "¿De cual desea conocer los beneficios?"));
+
+        NuevoAsiento.setCategoria(Categoria);
+
+        NuevoAsiento.SeleccionarAsiento();
         
         Constructora Heredia = new Constructora("A un costado del mall Oxigeno"+
                 "\n"+"Codigo de Sucursal: 7859 ");
