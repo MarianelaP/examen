@@ -1,1 +1,38 @@
+package Examen1;
 
+
+ class Constructora {
+     
+    private String direccion;
+    private String personal;
+    private String clientes;
+    private String codigoSucursal;
+    
+    public Constructora(
+            String direccion){
+            
+        this.personal = direccion;
+        this.direccion = personal;
+        this.clientes = clientes;
+        this.codigoSucursal = codigoSucursal;
+    }
+    
+    public String getDireccion(){
+        return direccion;
+    }
+    
+    public String getPersonal() {
+        return personal;
+    }
+    
+    public String getClientes(){
+        return clientes;
+    }
+    
+    public String getCodigoSucursal(){
+        return codigoSucursal;
+    }
+    
+    
+    
+}
