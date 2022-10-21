@@ -1,1 +1,40 @@
+package Examen1;
+import javax.swing.JOptionPane;
 
+public class Maquinaria {
+   
+    private String modelo;
+    private String color;
+    private String año de compra;
+    
+    public Maquinaria (String modelo, String color, String año de compra){
+        this.modelo = modelo;
+        this.color = color;
+        this añodecompra = añodecompra;
+        
+    }
+     public String getmodelo() {
+        return modelo;
+    }
+
+    public void setmodelo(String modelo) {
+        this.modelo= modelo;
+    }
+    
+    public String getcolor() {
+        return color;
+    }
+
+    public void setcolor(String color) {
+        this.color = color;
+    }
+    
+    public String getañodecompra() {
+        return añodecompra;
+    }
+
+    public void setañodecompra(String añodecompra) {
+        this.añodecompra = añodecompra;
+    
+    }
+}
