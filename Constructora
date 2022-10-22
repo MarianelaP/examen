@@ -9,10 +9,11 @@ package Examen1;
     private String codigoSucursal;
     
     public Constructora(
-            String direccion){
+            String direccion, String personal,
+            String clientes, String codigoSucursal){
             
-        this.personal = direccion;
-        this.direccion = personal;
+        this.direccion = direccion;
+        this.personal = personal;
         this.clientes = clientes;
         this.codigoSucursal = codigoSucursal;
     }
@@ -32,7 +33,6 @@ package Examen1;
     public String getCodigoSucursal(){
         return codigoSucursal;
     }
-    
     
     
 }
