@@ -1,1 +1,66 @@
+package Examen1;
 
+
+public class Personal {
+    private String nombre1;
+    private String nombre2;
+    private String nombre3;
+    private String edad1;
+    private String edad2;
+    private String edad3;
+    private String cedula1;
+    private String cedula2;
+    private String cedula3;
+    
+    public Personal(String nombre1,String nombre2,String nombre3,
+            String edad1,String edad2,String edad3, String cedula1,
+            String cedula2,String cedula3){
+        
+       this.nombre1 = nombre1;
+       this.nombre2 = nombre2;
+       this.nombre3 = nombre3;
+       this.edad1 = edad1;
+       this.edad2 =edad2;
+       this.edad3 = edad3;
+       this.cedula1 = cedula1;
+       this.cedula2 = cedula2;
+       this.cedula3 = cedula3;
+    }
+       
+       
+       public String getNombre1(){
+        return nombre1;
+    }
+       public String getNombre2(){
+        return nombre2;
+    }
+
+       public String getNombre3(){
+        return nombre3;
+    }
+
+       public String getEdad1(){
+           return edad1;
+    }
+
+        public String getEdad2(){
+           return edad2;
+    }
+
+         public String getEdad3(){
+           return edad3;
+    }
+
+       public String getCedula1(){
+           return cedula1;
+    }
+ 
+       public String getCedula2(){
+           return cedula2;
+    }
+
+       public String getCedula3(){
+           return cedula3;
+    }
+
+}
