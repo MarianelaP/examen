@@ -5,26 +5,17 @@ import javax.swing.JOptionPane;
 // Empresa Constructora
 public class Main {
     public static void main(String[] args) {
-    
-    Asientos NuevoAsiento = new Asientos(0);
-    
-    int Categoria;
-
-    Categoria = Integer.parseInt(JOptionPane.showInputDialog("Las categorias"
-                + " disponibles son: \n"
-                + "1. Alta\n"
-                + "2. Media\n"
-                + "3. Baja\n"
-                + "¿De cual desea conocer los beneficios?"));
-
-        NuevoAsiento.setCategoria(Categoria);
-
-        NuevoAsiento.SeleccionarAsiento();
         
-        Constructora Heredia = new Constructora("A un costado del mall Oxigeno"+
-                "\n"+"Codigo de Sucursal: 7859 ");
+        Constructora Heredia = new Constructora(
+                "A un costado del MALL OXIGENO",
+                "1 Gerente y 2 Vendedores","1 Cliente",
+                " 7869");
         Cliente NuevoCliente = new Cliente(null,null,null
                 ,0);
+        Personal  empleados = new Personal(" Juan Jose",
+                " Luis Alonso",
+                " Carlos Manuel","35","24","29",
+                "207090387","305060789","405070405");
     
     byte op = 0;
     
@@ -36,14 +27,31 @@ public class Main {
             +"\n"+"1. Constructora"+"\n"+"2. Personal"+"\n"+
             "3. Cliente"+"\n"+"4. Maquinaria"+"\n"+"5. Salir"));
     if (op ==1) {
-        JOptionPane.showMessageDialog(null,
-                "INFORMACIÓN DE LA SEDE Heredia"+"\n"+
-                "Ubicación: "+Heredia.getDireccion());
+       JOptionPane.showMessageDialog(null,
+                        "INFORMACIÓN DE LA SEDE SAN PEDRO" + "\n"
+                        + "Ubicación: " + Heredia.getDireccion() + "\n"
+                        + "Personal: " + Heredia.getPersonal() + "\n"
+                        + "Cuantos Clientes: " + Heredia.getClientes() + "\n"
+                        + "Sucursal: " + Heredia.getCodigoSucursal());
+                        
     }
     
     if (op == 2) {
         JOptionPane.showMessageDialog(null,
-                "Bienvenido a Personal");
+                        "INFORMACIÓN DE LA SEDE SAN PEDRO" + "\n"
+                        + "Gerente : " + empleados.getNombre1() + "\n"
+                        + "Edad : " + empleados.getEdad1() + "\n"
+                        + "Cedula : " + empleados.getCedula1() + "\n"
+                        + "Vendedor1  " + empleados.getNombre2()+ "\n"
+                        + "Edad : " + empleados.getEdad2() + "\n"
+                        + "Cedula : " + empleados.getCedula2() + "\n"
+                        + "Vendedor 2 : " + empleados.getNombre3() + "\n"
+                        + "Edad : " + empleados.getEdad3()+"\n"
+                        +"Cedula : " + empleados.getCedula3());
+                        
+        
+        
+            }
     }
     
     if(op == 3) {
@@ -60,15 +68,19 @@ public class Main {
                 int numeroTelefono;
                 
 
-                nombre = JOptionPane.showInputDialog("Ingrese su nombre:");
-                cedula= JOptionPane.showInputDialog("Ingrese su cedula:");
-                fechaPago = JOptionPane.showInputDialog("Ingrese su fecha de Pago:");
-                numeroTelefono = Integer.parseInt(JOptionPane.showInputDialog("Ingrese"
+                nombre = JOptionPane.showInputDialog(
+                        "Ingrese su nombre:");
+                cedula= JOptionPane.showInputDialog(
+                        "Ingrese su cedula:");
+                fechaPago = JOptionPane.showInputDialog(
+                        "Ingrese su fecha de Pago:");
+                numeroTelefono = Integer.parseInt(
+                        JOptionPane.showInputDialog("Ingrese"
                         + "su numero de telefono"));
 
                 NuevoCliente.setNombre(nombre);
                 NuevoCliente.setCedula(cedula);
-                NuevoCliente.setCedula(fechaPago);
+                NuevoCliente.setFechaPago(fechaPago);
                 NuevoCliente.setNumeroTelefono(numeroTelefono);
             }
     }
@@ -82,4 +94,3 @@ public class Main {
     
 }
     }
-}
