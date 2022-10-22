@@ -85,6 +85,17 @@ public class Main {
             }
     }
     if (op == 4){
+             JOptionPane.showMessageDialog(null,
+                        "INFORMACIÓN DE MAQUINARIA" + "\n"
+                        + "Modelo1 : " + Maquinaria.getModel1() + "\n"
+                        + "Color : " + Maquinaria.getColor1() + "\n"
+                        + "Año : " + Maquinaria.getAño1() + "\n"
+                        + "Modelo2 : " + Maquinaria.getModelo2() + "\n"
+                        + "Color : " + Maquinaria.getColor2() + "\n"
+                        + "Año : " + Maquinaria.getAño2() + "\n"
+                        + "Modelo3 : " + Maquinaria.getModelo3() + "\n"
+                        + "Color : " + Maquinaria.getColor3() + "\n"
+                        + "Año : " + Maquinaria.getAño3());
         
     }
     if(op == 5){
